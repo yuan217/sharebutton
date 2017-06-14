@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>button</title>
+
+  </head>
+
+  <body>
+    <div id="fb-root"></div>
+
+    <div class="fb-share-button" data-href="https://yuan217.github.io/whyyyyyyyyyjs/" data-layout="button" data-size="large" data-hashtag="#ElephantsNotForSale" data-mobile-iframe="false" >
+      <a class="fb-xfbml-parse-ignore" id="shareBtn" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2Fhashtag%2Felephantsnotforsale%3Ffref%3Dts&amp;src=sdkpreparse">分享
+      </a>
+    </div>
+
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId            : '{your-app-id}',
+          autoLogAppEvents : true,
+          xfbml            : true,
+          version          : 'v2.9'
+        });
+        FB.AppEvents.logPageView();
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk/debug.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <!-- <script>
+      document.getElementById('shareBtn').onclick = function() {
+        FB.ui({
+          method: 'share',
+          display: 'popup',
+          href: 'https://yuan217.github.io/whyyyyyyyyyjs/',
+          hashtag:'#me',
+        }, function(response){});
+      }
+    </script> -->
+
+  </body>
+</html>
